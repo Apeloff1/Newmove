@@ -2,89 +2,59 @@
 ## Product Requirements Document
 
 ## Original Problem Statement
-- Import GitHub repository: https://github.com/Apeloff1/Lorebuf22f
-- Compile and fix all errors, make game playable
-- Integrate all functions and game modes into open world
-- User choices: Story-driven, use existing lore, all game modes
-- **Update 1**: Add minigames to open world storyline
-- **Update 2**: Shops, tacklebox, rival, storyline
-- **Update 3**: Mechanics, fix overlays, fishing competition, witty renaming
+- Import GitHub repository: https://github.com/Apeloff1/Lorebuffa
+- Resume previous work / reopen last tab
+- Fix UI proportioning issues - menu items unreachable
+- Get code count
 
 ---
 
 ## What's Been Implemented (Jan 21, 2026)
 
-### Witty Renaming - COMPLETE ✅ (NEW)
-All game elements renamed with silly/witty names avoiding copyright:
+### Latest Session - UI Proportioning Fix ✅
+- Fixed character creation modal overflow issues
+- Made origin selection list scrollable (max-height: 40vh)
+- Fixed adventure intro screen layout (overflow-y-auto)
+- All action buttons now accessible at bottom of screens
+- Close buttons repositioned to fixed position
 
-**Locations:**
-| Old Name | New Name | Description |
-|----------|----------|-------------|
-| Harbor Square | Barnacle Bay Plaza | "Fish merchants yell at clouds..." |
-| The Docks | Wobbly Pier District | "Held together by hope and barnacle spit" |
-| Tavern | The Tipsy Tentacle | "Where dreams marinate in rum" |
-| Lighthouse | The Tipsy Tower | "Artistically tilted since '83" |
-| Treasure Chamber | Captain Codswallop's Hoard | "Some of these are chocolate coins" |
-| Merchant Quarter | Overpriced Boulevard | "300% markup on dreams" |
-| Governor's Manor | Lord Fancypants Estate | "Even dust wears monocles" |
-| Mermaid Lagoon | The Probably Magical Lagoon | "Someone went heavy on glitter" |
-| Shipwreck Beach | Beach of Broken Dreams | "Crabs. Crabs everywhere. They're watching." |
-
-**NPCs:**
-- "Razor" Ricky Sharkbait (rival - "hair flips in nonexistent wind")
-- Hooky McHookface (tackle shop)
-- Angry Ingrid (rod shop)
-- Forgetful Fred, Twitchy Tim, Professor Pompous, Obsessive Ollie (minigame hosts)
-- Lord Bartholomew Fancypants III (governor)
-- Gary the Unnecessarily Cryptic (hermit)
-
-**Shop Items:**
-- Wiggly Worm Wad, Disco Ball Jr., The Hypno-Wiggler
-- Smooch of the Sea ("Allegedly kissed by mermaid. She denies it")
-- The Overcompensator (steel rod - "Big rod energy")
-- Lazy Fisher's Friend (auto-reeler)
-
-### Fishing Competition vs Rival - COMPLETE ✅ (NEW)
-Real-time competitive fishing against Ricky:
-- VS screen with player vs Ricky portraits
-- 60-second timed matches (standard) up to 180s (final showdown)
-- Score tracking for both players
-- Ricky taunts during gameplay
-- Silly fish names: Sassy Sardine, Melodramatic Mackerel, Theatrical Tuna, Existential Eel
-- Gold + XP rewards based on win/loss
-- "Battle Ricky!" button in action bar
-
-### UI Fixes - COMPLETE ✅ (NEW)
-- Fixed character creation overlay click issues (z-index)
-- Fixed button interactions in modals
-- Added hover states for better feedback
+### Previous Features (Working)
+- Full character creation system (5 steps)
+- Adventure Mode with open world
+- Witty renamed locations & NPCs
+- Fishing Competition vs Rival "Ricky"
+- Shop system (4 shops with items)
+- Enhanced Tacklebox (8 category tabs)
+- Minigames in Tavern (Memory, Timing, Quiz, Sorting)
+- 125+ NPCs across 5 regions
+- Branching story dialogue
 
 ---
 
-## Previous Features (Still Working)
+## Code Statistics
 
-### Rival System
-- Ricky appears in 6 locations throughout story
-- Full dialogue trees with branching options
+| Category | Count |
+|----------|-------|
+| **Total Lines** | ~83,600 |
+| Frontend JS/JSX files | 114 |
+| Frontend CSS files | 4 |
+| Frontend lines | ~58,000 |
+| Backend Python files | 38 |
+| Backend lines | ~25,600 |
+| JSX Components | 39 |
 
-### Shop System (4 shops)
-- Tackle, Rods, Magic, General store
-- All with witty descriptions
-
-### Enhanced Tacklebox
-- 8 category tabs
-- Search, filter, sort
-
-### Minigames in Tavern
-- Memory, Timing, Quiz, Sorting
+### Key Files
+- App.js: 1,551 lines
+- App.css: 3,038 lines
+- pirateTheme.css: 4,405 lines
+- pirateLore.js: 5,958 lines
 
 ---
 
-## Test Results
-- Character creation: ✅ Fixed
-- Gender selection clicks: ✅ Working
-- Fishing Competition: ✅ Working
-- Witty names: ✅ Implemented
+## Tech Stack
+- **Frontend**: React.js, Tailwind CSS, Zustand state management
+- **Backend**: FastAPI (Python), Motor (async MongoDB)
+- **Database**: MongoDB
 
 ---
 
@@ -92,6 +62,7 @@ Real-time competitive fishing against Ricky:
 1. Add fishing net mechanics to boats
 2. More quest chains
 3. Voice acting integration
+4. Mobile responsive improvements
 
 ---
 
