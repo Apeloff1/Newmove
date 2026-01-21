@@ -398,7 +398,7 @@ const BackgroundStep = ({ selected, onSelect }) => {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {/* Background Options */}
-        <div className="lg:col-span-2 space-y-3 max-h-[450px] overflow-y-auto pr-2 custom-scrollbar">
+        <div className="lg:col-span-2 space-y-3 max-h-[40vh] overflow-y-auto pr-2 custom-scrollbar">
           {BACKGROUNDS.map(bg => (
             <button
               key={bg.id}
@@ -872,14 +872,14 @@ const CharacterCreation = ({ onComplete, onBack }) => {
 
   return (
     <div 
-      className="fixed inset-0 z-50 flex flex-col items-center justify-center p-4 overflow-hidden"
+      className="fixed inset-0 z-50 flex flex-col items-center justify-start p-4 overflow-y-auto"
       data-testid="character-creation"
     >
       {/* Animated Background */}
       <AnimatedBackground />
 
       {/* Content Container */}
-      <div className="relative z-10 w-full max-w-4xl flex flex-col items-center">
+      <div className="relative z-10 w-full max-w-4xl flex flex-col items-center my-auto py-4">
         
         {/* Step Indicator (hidden on welcome) */}
         {currentStep > 0 && (
@@ -891,7 +891,7 @@ const CharacterCreation = ({ onComplete, onBack }) => {
         )}
 
         {/* Main Content Card */}
-        <div className="w-full bg-black/40 backdrop-blur-xl rounded-3xl border border-white/10 p-8 shadow-2xl">
+        <div className="w-full bg-black/40 backdrop-blur-xl rounded-3xl border border-white/10 p-6 md:p-8 shadow-2xl max-h-[85vh] overflow-y-auto">
           
           {/* Step 0: Welcome */}
           {currentStep === 0 && (
