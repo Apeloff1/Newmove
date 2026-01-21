@@ -236,7 +236,7 @@ const AdventureModeInner = ({ onClose }) => {
           </div>
 
           {/* Features preview */}
-          <div className="mt-6 grid grid-cols-3 gap-3 text-center">
+          <div className="mt-6 grid grid-cols-3 gap-3 text-center pb-4">
             <div className="glass-panel p-2 rounded-lg">
               <div className="text-xl mb-1">🗺️</div>
               <div className="text-[10px] text-amber-200">5 Regions</div>
@@ -255,7 +255,7 @@ const AdventureModeInner = ({ onClose }) => {
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+          className="fixed top-4 right-4 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-20"
           data-testid="close-intro-btn"
         >
           <X className="w-6 h-6 text-white" />
