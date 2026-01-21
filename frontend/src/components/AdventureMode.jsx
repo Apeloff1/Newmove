@@ -132,14 +132,14 @@ const AdventureModeInner = ({ onClose }) => {
   if (!adventureStarted && showIntro) {
     return (
       <div 
-        className="adventure-intro fixed inset-0 z-50 flex items-center justify-center"
+        className="adventure-intro fixed inset-0 z-50 flex items-start justify-center overflow-y-auto"
         style={{ background: 'linear-gradient(180deg, #0a1628 0%, #1a3a5c 50%, #0d2040 100%)' }}
         data-testid="adventure-intro"
       >
         <Toaster position="top-center" richColors />
         
         {/* Animated background elements */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="fixed inset-0 overflow-hidden pointer-events-none">
           {PARTICLE_POSITIONS.map((particle, i) => (
             <div
               key={i}
@@ -156,7 +156,7 @@ const AdventureModeInner = ({ onClose }) => {
           ))}
         </div>
 
-        <div className="relative z-10 text-center px-6 max-w-2xl animate-scale-pop">
+        <div className="relative z-10 text-center px-6 max-w-2xl animate-scale-pop py-8 my-auto min-h-0">
           {/* Character Card */}
           {character && (
             <div className="glass-panel rounded-2xl p-4 mb-6 border-2 border-gold/40 animate-slide-up">
